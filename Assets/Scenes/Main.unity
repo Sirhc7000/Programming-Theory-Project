@@ -1399,22 +1399,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6577767260278684444, guid: de19fea2230464939a85371929938b18, type: 3}
-      propertyPath: spawnDelayRangeValues.Array.data[1]
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6577767260278684444, guid: de19fea2230464939a85371929938b18, type: 3}
-      propertyPath: spawnDelayRangeValues.Array.data[3]
-      value: 2.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6577767260278684444, guid: de19fea2230464939a85371929938b18, type: 3}
-      propertyPath: spawnDelayRangeValues.Array.data[5]
-      value: 2.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6577767260278684444, guid: de19fea2230464939a85371929938b18, type: 3}
-      propertyPath: spawnDelayRangeValues.Array.data[7]
-      value: 1.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6577767260278684444, guid: de19fea2230464939a85371929938b18, type: 3}
       propertyPath: spawnDelayRangeValues.Array.data[9]
       value: 1.7
       objectReference: {fileID: 0}
