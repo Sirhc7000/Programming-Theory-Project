@@ -109,5 +109,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0224f799d4fd45ffb28fe8ccedbfb27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 1
-  currentPos: {x: 0, y: 0, z: 0}
+  playTime: 0
+  playTimeRangeValues:
+  - 1
+  - 3
+  - 1.5
+  - 2.5
+  - 1
+  - 2
+  - 0.5
+  - 1.5
+  - 0.2
+  - 0.5

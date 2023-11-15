@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{2ADA6F53-F14B-4B56-C19D-E8DA678BB3AE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Mole.cs">
     <Files>
       <File FileName="Assets/Scripts/Button.cs" Line="23" Column="9" />
-      <File FileName="Assets/Scripts/SpawnManager.cs" Line="16" Column="43" />
-      <File FileName="Assets/Scripts/Mole.cs" Line="41" Column="77" />
+      <File FileName="Assets/Scripts/SpawnManager.cs" Line="35" Column="16" />
       <File FileName="Assets/Scripts/Hole.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Timer.cs" Line="12" Column="12" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="11" Column="12" NotebookId="1" />
+      <File FileName="Assets/Scripts/Timer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="9" Column="16" NotebookId="1" />
+      <File FileName="Assets/Scripts/Mole.cs" Line="9" Column="5" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +14,7 @@
           <Node name="Programming Theory Project" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="GameManager.cs" selected="True" />
+                <Node name="Mole.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -24,7 +24,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="56146d19-22bf-4b7c-950f-d169e0a6b4af" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="799ea352-1c47-4710-9127-d05d2b82e33d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

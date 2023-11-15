@@ -5,21 +5,42 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public List<GameObject> moles;
-    public float respawnTime;
+    public List<float> spawnDelayRangeValues;
+    public float spawnDelay;
+    private float timeSinceLastSpawn = 0f;
 
     Timer timer;
+    GameManager gameManager; 
 
 
     // Start is called before the first frame update
     void Start()
     {
         timer = FindObjectOfType<Timer>();
-        GenerateMole();
+        gameManager = FindObjectOfType<GameManager>();
+
+        UpdateSpawnDelayBySpeedSetting(gameManager.currentGameSpeed);
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        // if there is no mole spawned, start timeSinceLastSpawn timer.
+        // once the mole is generated in this script, this will not run again until the mole is destroyed. 
+        if (transform.childCount < 1)
+        {
+            timeSinceLastSpawn += Time.deltaTime;
+
+            // if timeSinceLastSpawn hits spawnDelay time, reset timer, update the spawn delay speed based on how much time is left, and generate the mole. 
+            if (timeSinceLastSpawn >= spawnDelay)
+            {
+                timeSinceLastSpawn = 0f;
+                UpdateSpawnDelayBySpeedSetting(gameManager.currentGameSpeed);
+                GenerateMole();
+            }
+
+        }
         
     }
 
@@ -31,5 +52,20 @@ public class SpawnManager : MonoBehaviour
             transform.rotation, this.transform);
     }
 
+    private void SetDelayTime(float value1, float value2)
+    {
+        spawnDelay = Random.Range(value1, value2);
+    }
+
+    private void UpdateSpawnDelayBySpeedSetting(SpeedSettings setting)
+    {
+        int index = (int)setting;
+        SetDelayTime(spawnDelayRangeValues[index], spawnDelayRangeValues[index + 1]);
+    }
+
+    private void CountDownSpawnDelay()
+    {
+        spawnDelay -= Time.deltaTime;
+    }
 
 }

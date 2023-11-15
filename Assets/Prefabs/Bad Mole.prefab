@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2155968932592335558}
   - component: {fileID: 2155968932592335559}
   - component: {fileID: 2155968932592335556}
-  - component: {fileID: -1940337341234036919}
+  - component: {fileID: 2560382943497168523}
   m_Layer: 0
   m_Name: Bad Mole
   m_TagString: Untagged
@@ -97,7 +97,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &-1940337341234036919
+--- !u!114 &2560382943497168523
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,5 +109,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0224f799d4fd45ffb28fe8ccedbfb27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSpawned: 0
-  currentPos: {x: 0, y: 0, z: 0}
+  playTime: 0
+  playTimeRangeValues:
+  - 1
+  - 3
+  - 1.5
+  - 2.5
+  - 1
+  - 2
+  - 0.5
+  - 1.5
+  - 0.3
+  - 0.8

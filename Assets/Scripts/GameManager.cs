@@ -5,18 +5,19 @@ using UnityEngine;
 
 public enum SpeedSettings
 {
-    Speed1,
-    Speed2,
-    Speed3,
-    Speed4,
-    Speed5
+    Speed1 = 0,
+    Speed2 = 1,
+    Speed3 = 2,
+    Speed4 = 3,
+    Speed5 = 4
 }
 
 public class GameManager : MonoBehaviour
 {
     Timer timer;
+    Mole mole;
 
-    [SerializeField] SpeedSettings currentGameSpeed;
+    public SpeedSettings currentGameSpeed;
 
     const float Speed1Threshold = 80f;
     const float Speed2Threshold = 60f;
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         timer = FindObjectOfType<Timer>();
+        mole = FindObjectOfType<Mole>();
         currentGameSpeed = SpeedSettings.Speed1;
     }
 

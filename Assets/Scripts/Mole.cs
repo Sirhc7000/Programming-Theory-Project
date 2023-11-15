@@ -9,18 +9,26 @@ public class Mole : MonoBehaviour
     public List<float> playTimeRangeValues;
 
     Timer timer;
+    GameManager gameManager;
 
    
     //Start is called before the first frame update
     void Start()
     {
         timer = FindObjectOfType<Timer>();
+        gameManager = FindObjectOfType<GameManager>();
+
+        UpdatePlayTimeBySpeedSetting(gameManager.currentGameSpeed);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        CountDownPlayTime();
+
+        if (playTime < 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnMouseDown()
@@ -33,11 +41,19 @@ public class Mole : MonoBehaviour
         playTime = Random.Range(value1, value2);
     }
 
-    // TODO: Figure below out next. How can I make this work with parameters?
-    private void UpdatePlayTimeBySpeedSetting(SpeedSettings setting, int index)
+    
+    private void UpdatePlayTimeBySpeedSetting(SpeedSettings setting)
     {
+        int index = (int)setting;
        SetPlayTime(playTimeRangeValues[index], playTimeRangeValues[index + 1]);
         
     }
+
+
+    private void CountDownPlayTime()
+    {
+        playTime -= Time.deltaTime;
+    }
+
     
 }
