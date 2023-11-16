@@ -33,7 +33,10 @@ public class Mole : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Destroy(gameObject);
+        if (gameManager.IsGameActive())
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void SetPlayTime(float value1, float value2)

@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
     [SerializeField] Text timerText;
     [SerializeField] float startingTimeValue = 30f;
     public float timeValue;
-    public float currentTimeRemaining;
+    // public float currentTimeRemaining;
     public float timeRemainingPercentage;
 
 

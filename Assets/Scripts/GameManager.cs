@@ -6,10 +6,10 @@ using UnityEngine;
 public enum SpeedSettings
 {
     Speed1 = 0,
-    Speed2 = 1,
-    Speed3 = 2,
-    Speed4 = 3,
-    Speed5 = 4
+    Speed2 = 2,
+    Speed3 = 4,
+    Speed4 = 6,
+    Speed5 = 8
 }
 
 public class GameManager : MonoBehaviour
@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     Mole mole;
 
     public SpeedSettings currentGameSpeed;
+    bool isGameActive = true;
 
     const float Speed1Threshold = 80f;
     const float Speed2Threshold = 60f;
@@ -29,12 +30,17 @@ public class GameManager : MonoBehaviour
     {
         timer = FindObjectOfType<Timer>();
         mole = FindObjectOfType<Mole>();
+
+        isGameActive = true;
+        ResumeGame();
         currentGameSpeed = SpeedSettings.Speed1;
     }
 
     void Update()
     {
         UpdateGameSpeed();
+        CheckForExpiredTimer();
+        
     }
 
     void UpdateGameSpeed()
@@ -65,5 +71,36 @@ public class GameManager : MonoBehaviour
                 currentGameSpeed = SpeedSettings.Speed5;
                 break;
         }
+
     }
+
+    public bool IsGameActive()
+    {
+        return isGameActive;
+    }
+
+    public void EndGame()
+    {
+        isGameActive = false;
+    }
+
+    public void CheckForExpiredTimer()
+    {
+        if (timer.timeValue <= 0)
+        {
+            EndGame();
+            PauseGame();
+        }
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+    }
+
 }
