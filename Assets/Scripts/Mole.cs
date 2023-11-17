@@ -7,16 +7,18 @@ public class Mole : MonoBehaviour
 {
     public float playTime;
     public List<float> playTimeRangeValues;
+    [SerializeField] int pointValue;
 
     Timer timer;
     GameManager gameManager;
-
+    Score score;
    
     //Start is called before the first frame update
     void Start()
     {
         timer = FindObjectOfType<Timer>();
         gameManager = FindObjectOfType<GameManager>();
+        score = FindObjectOfType<Score>();
 
         UpdatePlayTimeBySpeedSetting(gameManager.currentGameSpeed);
     }
@@ -35,6 +37,7 @@ public class Mole : MonoBehaviour
     {
         if (gameManager.IsGameActive())
         {
+            score.AddToScore(pointValue);
             Destroy(gameObject);
         }
     }

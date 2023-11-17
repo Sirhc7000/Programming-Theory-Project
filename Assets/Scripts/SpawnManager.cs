@@ -63,9 +63,4 @@ public class SpawnManager : MonoBehaviour
         SetDelayTime(spawnDelayRangeValues[index], spawnDelayRangeValues[index + 1]);
     }
 
-    private void CountDownSpawnDelay()
-    {
-        spawnDelay -= Time.deltaTime;
-    }
-
 }
