@@ -7,6 +7,7 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI scoreTotalText;
     [SerializeField] int scoreTotal;
 
     public void AddToScore(int scoreValue)
@@ -24,5 +25,6 @@ public class Score : MonoBehaviour
    void UpdateScoreDisplay()
     {
         scoreText.text = $"Score: {scoreTotal}";
+        scoreTotalText.text = $"{scoreTotal}";
     }
 }

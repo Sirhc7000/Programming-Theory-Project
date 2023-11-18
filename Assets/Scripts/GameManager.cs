@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     Mole mole;
 
     public SpeedSettings currentGameSpeed;
+    public GameObject postGameUI;
     bool isGameActive = true;
 
     const float Speed1Threshold = 80f;
@@ -84,12 +85,18 @@ public class GameManager : MonoBehaviour
         isGameActive = false;
     }
 
+    void RevealScorePanel()
+    {
+        postGameUI.SetActive(true);
+    }
+
     public void CheckForExpiredTimer()
     {
         if (timer.timeValue <= 0)
         {
             EndGame();
             PauseGame();
+            RevealScorePanel();
         }
     }
 
