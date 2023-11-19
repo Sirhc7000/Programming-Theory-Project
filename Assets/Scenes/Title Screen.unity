@@ -286,7 +286,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2096807182}
-        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2096807181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89ef0ef94a6874c7396790c5f6f5dcac, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cf9810be1c4c4e7b8bc7f2777e66b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &2096807183

@@ -45,7 +45,6 @@ public class Timer : MonoBehaviour
         }
 
         // ensures all 30 seconds are displayed when timer reaches 0.
-        //
         else if (timeToDisplay > 0)
         {
             timeToDisplay += 1;
