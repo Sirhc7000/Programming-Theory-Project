@@ -62,8 +62,8 @@
     <Compile Include="Assets/Scripts/Score.cs" />
     <Compile Include="Assets/Scripts/Hole.cs" />
     <Compile Include="Assets/Scripts/Button.cs" />
-    <Compile Include="Assets/Scripts/GameManager.cs" />
     <Compile Include="Assets/Scripts/LevelManager.cs" />
+    <Compile Include="Assets/Scripts/GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

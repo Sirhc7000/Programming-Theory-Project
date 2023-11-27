@@ -48,8 +48,8 @@ public class SpawnManager : MonoBehaviour
     {
         int randomMole = Random.Range(0, moles.Count);
         GameObject newMole = Instantiate(moles[randomMole],
-            new Vector3(transform.position.x, transform.position.y + 1, transform.position.z),
-            transform.rotation, this.transform);
+            new Vector3(transform.position.x, transform.position.y, transform.position.z),
+            Quaternion.Euler(0f, 180f, 0f), this.transform);
     }
 
     private void SetDelayTime(float value1, float value2)
