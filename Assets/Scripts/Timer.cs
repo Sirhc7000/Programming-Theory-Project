@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] Text timerText;
+    [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] float startingTimeValue = 30f;
     public float timeValue;
     // public float currentTimeRemaining;
@@ -51,10 +52,14 @@ public class Timer : MonoBehaviour
         }
 
         //converting seconds to min:seconds format ensuring 60 seconds will display 1:00
-        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
-        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+        //float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        //float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        float timeFloor = Mathf.FloorToInt(timeToDisplay);
+
+        //timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+        timerText.text = $"{timeFloor}";
     }
 
     void CalculateTimeValuePercentage()

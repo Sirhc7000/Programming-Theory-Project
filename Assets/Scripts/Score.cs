@@ -24,7 +24,7 @@ public class Score : MonoBehaviour
 
    void UpdateScoreDisplay()
     {
-        scoreText.text = $"Score: {scoreTotal}";
+        scoreText.text = $"{scoreTotal}";
         scoreTotalText.text = $"{scoreTotal}";
     }
 }
