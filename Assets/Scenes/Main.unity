@@ -312,7 +312,7 @@ Transform:
   - {fileID: 1201809671}
   - {fileID: 1139724000}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &260338956
 PrefabInstance:
@@ -538,7 +538,7 @@ Transform:
   - {fileID: 885943490}
   - {fileID: 1541124789}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &568930901
 GameObject:
@@ -927,6 +927,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -67.943, z: 0}
+--- !u!1 &755962203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 755962205}
+  - component: {fileID: 755962204}
+  m_Layer: 0
+  m_Name: CursorController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &755962204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755962203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006c8229b485d4832a14bf5753d89bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 2800000, guid: 8e6c09b25d7ba4996aaa5b35da343957, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 32}
+--- !u!4 &755962205
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755962203}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1531892, y: 0.49745333, z: 4.1750007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &784156226 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4769613004032874, guid: 69bd4e7eb6acd41aaa7f33420dadc6c6, type: 3}
@@ -2249,6 +2295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentGameSpeed: 0
   postGameUI: {fileID: 1611467086}
+  isGameActive: 1
 --- !u!4 &1580785140
 Transform:
   m_ObjectHideFlags: 0
@@ -2445,7 +2492,7 @@ RectTransform:
   - {fileID: 1138334887}
   - {fileID: 1033257251}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2865,7 +2912,7 @@ RectTransform:
   - {fileID: 1154924843}
   - {fileID: 568930902}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

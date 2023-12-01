@@ -16,10 +16,11 @@ public class GameManager : MonoBehaviour
 {
     Timer timer;
     Mole mole;
+    CursorController cursor;
 
     public SpeedSettings currentGameSpeed;
     public GameObject postGameUI;
-    bool isGameActive = true;
+    public bool isGameActive = true;
 
     const float Speed1Threshold = 80f;
     const float Speed2Threshold = 60f;
@@ -31,9 +32,11 @@ public class GameManager : MonoBehaviour
     {
         timer = FindObjectOfType<Timer>();
         mole = FindObjectOfType<Mole>();
+        cursor = FindObjectOfType<CursorController>();
 
         isGameActive = true;
         ResumeGame();
+        cursor.UpdateCursor();
         currentGameSpeed = SpeedSettings.Speed1;
     }
 
@@ -83,6 +86,7 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         isGameActive = false;
+        cursor.UpdateCursor();
     }
 
     void RevealScorePanel()
