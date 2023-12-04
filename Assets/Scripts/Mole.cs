@@ -12,6 +12,7 @@ public class Mole : MonoBehaviour
     Timer timer;
     GameManager gameManager;
     Score score;
+    Animator animator;
    
     //Start is called before the first frame update
     void Start()
@@ -19,8 +20,10 @@ public class Mole : MonoBehaviour
         timer = FindObjectOfType<Timer>();
         gameManager = FindObjectOfType<GameManager>();
         score = FindObjectOfType<Score>();
+        animator = GetComponent<Animator>();
 
         UpdatePlayTimeBySpeedSetting(gameManager.currentGameSpeed);
+        animator.SetTrigger("OnMoleSpawn");
     }
 
     private void Update()

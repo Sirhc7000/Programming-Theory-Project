@@ -10,7 +10,8 @@ public class SpawnManager : MonoBehaviour
     private float timeSinceLastSpawn = 0f;
 
     Timer timer;
-    GameManager gameManager; 
+    GameManager gameManager;
+    //Animator animator;
 
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class SpawnManager : MonoBehaviour
     {
         timer = FindObjectOfType<Timer>();
         gameManager = FindObjectOfType<GameManager>();
+        //animator = GetComponent<Animator>();
 
         UpdateSpawnDelayBySpeedSetting(gameManager.currentGameSpeed);
        
@@ -38,6 +40,7 @@ public class SpawnManager : MonoBehaviour
                 timeSinceLastSpawn = 0f;
                 UpdateSpawnDelayBySpeedSetting(gameManager.currentGameSpeed);
                 GenerateMole();
+                //animator.SetTrigger("OnMoleSpawn");
             }
 
         }

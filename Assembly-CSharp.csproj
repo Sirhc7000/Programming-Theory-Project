@@ -59,12 +59,12 @@
     <Compile Include="Assets/Scripts/Mole.cs" />
     <Compile Include="Assets/Scripts/Timer.cs" />
     <Compile Include="Assets/Scripts/SpawnManager.cs" />
+    <Compile Include="Assets/Scripts/CursorController.cs" />
     <Compile Include="Assets/Scripts/Score.cs" />
     <Compile Include="Assets/Scripts/Hole.cs" />
     <Compile Include="Assets/Scripts/Button.cs" />
     <Compile Include="Assets/Scripts/LevelManager.cs" />
     <Compile Include="Assets/Scripts/GameManager.cs" />
-    <Compile Include="Assets/Scripts/CursorController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
