@@ -321,6 +321,7 @@ MonoBehaviour:
   - 0.2
   - 0.5
   pointValue: 200
+  destroyDelay: 0.1
 --- !u!95 &-2276148571411371646
 Animator:
   serializedVersion: 3

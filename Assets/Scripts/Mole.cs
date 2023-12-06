@@ -8,6 +8,7 @@ public class Mole : MonoBehaviour
     public float playTime;
     public List<float> playTimeRangeValues;
     [SerializeField] int pointValue;
+    [SerializeField] float destroyDelay = 0.1f;
 
     Timer timer;
     GameManager gameManager;
@@ -32,7 +33,7 @@ public class Mole : MonoBehaviour
 
         if (playTime < 0)
         {
-            Destroy(gameObject);
+            MoleDown();
         }
     }
 
@@ -41,7 +42,7 @@ public class Mole : MonoBehaviour
         if (gameManager.IsGameActive())
         {
             score.AddToScore(pointValue);
-            Destroy(gameObject);
+            MoleDown();
         }
     }
 
@@ -62,6 +63,12 @@ public class Mole : MonoBehaviour
     private void CountDownPlayTime()
     {
         playTime -= Time.deltaTime;
+    }
+
+    private void MoleDown()
+    {
+        animator.SetTrigger("OnMoleExpired");
+        Destroy(gameObject, destroyDelay);
     }
 
     
