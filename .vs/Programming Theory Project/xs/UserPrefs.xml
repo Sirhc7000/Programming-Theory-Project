@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{2ADA6F53-F14B-4B56-C19D-E8DA678BB3AE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Mole.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LevelManager.cs">
     <Files>
       <File FileName="Assets/Scripts/SpawnManager.cs" Line="43" Column="27" />
       <File FileName="Assets/Scripts/Score.cs" />
-      <File FileName="Assets/Scripts/LevelManager.cs" />
-      <File FileName="Assets/Scripts/Timer.cs" Line="62" Column="9" />
+      <File FileName="Assets/Scripts/LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Timer.cs" />
       <File FileName="Assets/Scripts/Button.cs" />
-      <File FileName="Assets/Scripts/CursorController.cs" Line="35" Column="43" />
+      <File FileName="Assets/Scripts/CursorController.cs" />
       <File FileName="Assets/Scripts/GameManager.cs" Line="39" Column="31" NotebookId="1" />
-      <File FileName="Assets/Scripts/Mole.cs" Line="45" Column="47" NotebookId="1" />
+      <File FileName="Assets/Scripts/Mole.cs" Line="17" Column="4" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +16,7 @@
           <Node name="Programming Theory Project" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Mole.cs" selected="True" />
+                <Node name="LevelManager.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -26,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f79aac48-e8d3-4a87-adac-57593f6ae3a8" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9de4f680-6345-485c-86e7-8c4d7358cde2" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
