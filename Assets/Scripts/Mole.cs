@@ -8,13 +8,19 @@ public class Mole : MonoBehaviour
     public float playTime;
     public List<float> playTimeRangeValues;
     [SerializeField] int pointValue;
-    [SerializeField] float destroyDelay = 0.1f;
+    float destroyDelay = 0.4f;
+
+    
+    [SerializeField] AudioClip moleAppear;
+    [SerializeField] AudioClip moleHit;
+
 
     Timer timer;
     GameManager gameManager;
     Score score;
     Animator animator;
-   
+    AudioSource audioSource;
+
     //Start is called before the first frame update
     void Start()
     {
@@ -22,9 +28,14 @@ public class Mole : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         score = FindObjectOfType<Score>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         UpdatePlayTimeBySpeedSetting(gameManager.currentGameSpeed);
         animator.SetTrigger("OnMoleSpawn");
+
+        audioSource.clip = moleAppear;
+        audioSource.Play();
+
     }
 
     private void Update()
@@ -41,7 +52,11 @@ public class Mole : MonoBehaviour
     {
         if (gameManager.IsGameActive())
         {
+            audioSource.clip = moleHit;
+            audioSource.Play();
+
             score.AddToScore(pointValue);
+            
             MoleDown();
         }
     }
