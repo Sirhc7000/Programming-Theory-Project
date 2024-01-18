@@ -11,11 +11,16 @@ public class CursorController : MonoBehaviour
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
 
+    public AudioClip hammerHit;
+    public AudioClip hammerWhiff;
+
     GameManager gameManager;
+    AudioSource audioSource;
 
     private void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -35,6 +40,7 @@ public class CursorController : MonoBehaviour
             else if (Input.GetMouseButtonDown(0))
             {
                 Cursor.SetCursor(clickedCursor, hotSpot, cursorMode);
+                PlayHammerSFX();
             }
         }
         else
@@ -42,4 +48,23 @@ public class CursorController : MonoBehaviour
             Cursor.SetCursor(null, Vector2.zero, cursorMode);
         }
     }
+
+    void PlayHammerSFX()
+    {
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.CompareTag("Mole"))
+            {
+                audioSource.PlayOneShot(hammerHit, 0.5f);
+            }
+            else
+            {
+                audioSource.PlayOneShot(hammerWhiff);
+            }
+        }
+    }
 }
+

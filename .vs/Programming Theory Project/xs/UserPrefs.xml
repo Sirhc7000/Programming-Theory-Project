@@ -1,24 +1,30 @@
 ﻿<Properties StartupConfiguration="{2ADA6F53-F14B-4B56-C19D-E8DA678BB3AE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Hole.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Timer.cs">
     <Files>
       <File FileName="Assets/Scripts/SpawnManager.cs" Line="43" Column="27" />
       <File FileName="Assets/Scripts/Score.cs" />
       <File FileName="Assets/Scripts/LevelManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Timer.cs" />
-      <File FileName="Assets/Scripts/Button.cs" />
-      <File FileName="Assets/Scripts/CursorController.cs" />
-      <File FileName="Assets/Scripts/Hole.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="39" Column="31" NotebookId="1" />
-      <File FileName="Assets/Scripts/Mole.cs" NotebookId="1" />
+      <File FileName="Assets/Scripts/Timer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Button.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CursorController.cs" Line="55" Column="47" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="35" Column="51" NotebookId="1" />
+      <File FileName="Assets/Scripts/Mole.cs" Line="11" Column="5" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Programming Theory Project" expanded="True">
-            <Node name="Assets" expanded="True" selected="True">
-              <Node name="Scripts" expanded="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Timer.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="Programming Theory Project" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
