@@ -65,6 +65,7 @@
     <Compile Include="Assets/Scripts/Button.cs" />
     <Compile Include="Assets/Scripts/LevelManager.cs" />
     <Compile Include="Assets/Scripts/GameManager.cs" />
+    <Compile Include="Assets/Scripts/DifficultySetting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

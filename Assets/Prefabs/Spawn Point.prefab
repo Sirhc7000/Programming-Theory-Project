@@ -58,4 +58,20 @@ MonoBehaviour:
   - 1.5
   - 0.2
   - 1.7
+  difficultySettings:
+  - speedSetting: 0
+    minRange: 0.5
+    maxRange: 5
+  - speedSetting: 2
+    minRange: 0.8
+    maxRange: 4
+  - speedSetting: 4
+    minRange: 0.6
+    maxRange: 3
+  - speedSetting: 6
+    minRange: 0.4
+    maxRange: 1.5
+  - speedSetting: 8
+    minRange: 0.2
+    maxRange: 1.7
   spawnDelay: 0

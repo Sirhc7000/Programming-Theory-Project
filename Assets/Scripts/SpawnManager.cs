@@ -5,27 +5,23 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public List<GameObject> moles;
-    public List<float> spawnDelayRangeValues;
+    [SerializeField] private List<DifficultySetting> difficultySettings;
     public float spawnDelay;
     private float timeSinceLastSpawn = 0f;
 
     Timer timer;
     GameManager gameManager;
-    //Animator animator;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         timer = FindObjectOfType<Timer>();
         gameManager = FindObjectOfType<GameManager>();
-        //animator = GetComponent<Animator>();
 
         UpdateSpawnDelayBySpeedSetting(gameManager.currentGameSpeed);
        
     }
 
-    // Update is called once per frame
     void Update()
     {
         // if there is no mole spawned, start timeSinceLastSpawn timer.
@@ -40,7 +36,7 @@ public class SpawnManager : MonoBehaviour
                 timeSinceLastSpawn = 0f;
                 UpdateSpawnDelayBySpeedSetting(gameManager.currentGameSpeed);
                 GenerateMole();
-                //animator.SetTrigger("OnMoleSpawn");
+                
             }
 
         }
@@ -55,15 +51,16 @@ public class SpawnManager : MonoBehaviour
             Quaternion.Euler(0f, 180f, 0f), this.transform);
     }
 
-    private void SetDelayTime(float value1, float value2)
+    private void UpdateSpawnDelayBySpeedSetting(SpeedSettings newSpeed)
     {
-        spawnDelay = Random.Range(value1, value2);
-    }
-
-    private void UpdateSpawnDelayBySpeedSetting(SpeedSettings setting)
-    {
-        int index = (int)setting;
-        SetDelayTime(spawnDelayRangeValues[index], spawnDelayRangeValues[index + 1]);
+        foreach(DifficultySetting difficultySetting in difficultySettings)
+        {
+            if (difficultySetting.speedSetting == newSpeed)
+            {
+                spawnDelay = difficultySetting.GetSpawnDelay();
+                break;
+            }
+        }
     }
 
 }
