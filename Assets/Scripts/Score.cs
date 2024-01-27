@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI scoreTotalText;
-    [SerializeField] int scoreTotal;
+    [SerializeField] public static int scoreTotal;
 
     public void AddToScore(int scoreValue)
     {

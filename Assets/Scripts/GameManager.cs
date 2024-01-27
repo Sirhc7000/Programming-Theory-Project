@@ -87,6 +87,14 @@ public class GameManager : MonoBehaviour
     {
         isGameActive = false;
         cursor.UpdateCursor();
+
+        if (Score.scoreTotal > SaveDataManager.Data.highScore)
+        {
+            SaveDataManager.Data.highScore = Score.scoreTotal;
+        }
+
+        SaveDataManager.Data.previousScore = Score.scoreTotal;
+        SaveDataManager.SaveData();
     }
 
     void RevealScorePanel()
