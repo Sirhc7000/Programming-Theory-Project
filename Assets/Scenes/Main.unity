@@ -776,10 +776,10 @@ RectTransform:
   m_Father: {fileID: 1611467091}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 19, y: 11.5439}
-  m_SizeDelta: {x: -456.5547, y: -166.0497}
+  m_SizeDelta: {x: 387.4453, y: 307.95032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &666470470
 MonoBehaviour:
@@ -2701,7 +2701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1611467087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2716,7 +2716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1154924845}
   scoreTotalText: {fileID: 1138334885}
-  scoreTotal: 0
+  currentScore: 0
 --- !u!114 &1611467088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3244,7 +3244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1154924845}
   scoreTotalText: {fileID: 1138334885}
-  scoreTotal: 0
+  currentScore: 0
 --- !u!1001 &2001725759
 PrefabInstance:
   m_ObjectHideFlags: 0
