@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     Timer timer;
     Mole mole;
     CursorController cursor;
+    Score score;
 
     public SpeedSettings currentGameSpeed;
     public GameObject postGameUI;
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
         timer = FindObjectOfType<Timer>();
         mole = FindObjectOfType<Mole>();
         cursor = FindObjectOfType<CursorController>();
+        score = FindObjectOfType<Score>();
 
         isGameActive = true;
         ResumeGame();
@@ -87,6 +89,8 @@ public class GameManager : MonoBehaviour
     {
         isGameActive = false;
         cursor.UpdateCursor();
+        score.UpdateHighScore();
+
     }
 
     void RevealScorePanel()
@@ -96,7 +100,7 @@ public class GameManager : MonoBehaviour
 
     public void CheckForExpiredTimer()
     {
-        if (timer.timeValue <= 0)
+        if (timer.timeValue <= 0 && isGameActive)
         {
             EndGame();
             PauseGame();
