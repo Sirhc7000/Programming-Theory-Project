@@ -7,59 +7,61 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] float startingTimeValue = 30f;
+    const float startingTimeValue = 30f;
     public float timeValue;
     // public float currentTimeRemaining;
     public float timeRemainingPercentage;
+
+    GameManager gameManager;
 
 
     void Start()
     {
         timeValue = startingTimeValue;
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timeValue > 0)
+        if (gameManager.IsGameActive())
         {
-            timeValue -= Time.deltaTime;
+            if (timeValue > 0)
+            {
+                timeValue -= Time.deltaTime;
 
-        }
+            }
 
-        // clamping the time to 0 if it goes below that to prevent negative values
-        else
-        {
-            timeValue = 0;
-        }
+            // clamping the time to 0 if it goes below that to prevent negative values
+            else
+            {
+                timeValue = 0;
+            }
         
-        DisplayTime(timeValue);
-        CalculateTimeValuePercentage();
+            DisplayTime(timeValue);
+            CalculateTimeValuePercentage();
+
+        }
 
     }
 
     void DisplayTime(float timeToDisplay)
     {
-        if (timeToDisplay < 0)
+        // Ensure timeToDisplay never goes below 0 or above the set starting value
+        timeToDisplay = Mathf.Max(0, timeToDisplay);
+
+        // Calculate the display time as an integer
+        int timeFloor = Mathf.FloorToInt(timeToDisplay);
+
+        // Adjust for the rounding issue by checking the fractional part
+        // This ensures we don't prematurely increment the displayed time
+        if (timeToDisplay - timeFloor > 0)
         {
-            timeToDisplay = 0;
+            timeFloor += 1;
         }
 
-        // ensures all 30 seconds are displayed when timer reaches 0.
-        else if (timeToDisplay > 0)
-        {
-            timeToDisplay += 1;
-        }
-
-        //converting seconds to min:seconds format ensuring 60 seconds will display 1:00
-        //float minutes = Mathf.FloorToInt(timeToDisplay / 60);
-        //float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-
-        float timeFloor = Mathf.FloorToInt(timeToDisplay);
-
-        //timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-
-        timerText.text = $"{timeFloor}";
+        // Update the text display
+        timerText.text = timeFloor.ToString();
     }
 
     void CalculateTimeValuePercentage()

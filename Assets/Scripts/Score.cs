@@ -43,7 +43,7 @@ public class Score : MonoBehaviour
 
     public void UpdateHighScore()
     {
-        print($"Previous: {playerData.highScore}");
+        //print($"Previous: {playerData.highScore}");
 
         if (currentScore > playerData.highScore)
         {

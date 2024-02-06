@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
         score = FindObjectOfType<Score>();
 
         isGameActive = true;
-        ResumeGame();
         cursor.UpdateCursor();
         currentGameSpeed = SpeedSettings.Speed1;
     }
