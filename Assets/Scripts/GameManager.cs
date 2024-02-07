@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     Mole mole;
     CursorController cursor;
     Score score;
+    [SerializeField] PostGameUIHandler buttonHandler;
 
     public SpeedSettings currentGameSpeed;
     public GameObject postGameUI;
@@ -95,6 +96,7 @@ public class GameManager : MonoBehaviour
     void RevealScorePanel()
     {
         postGameUI.SetActive(true);
+        buttonHandler.ActivateButton();
     }
 
     public void CheckForExpiredTimer()
@@ -104,6 +106,7 @@ public class GameManager : MonoBehaviour
             EndGame();
             PauseGame();
             RevealScorePanel();
+            
         }
     }
 

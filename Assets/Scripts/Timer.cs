@@ -47,7 +47,7 @@ public class Timer : MonoBehaviour
 
     void DisplayTime(float timeToDisplay)
     {
-        // Ensure timeToDisplay never goes below 0 or above the set starting value
+        // Ensure timeToDisplay never goes below 0 or above the current set timeValue
         timeToDisplay = Mathf.Max(0, timeToDisplay);
 
         // Calculate the display time as an integer
