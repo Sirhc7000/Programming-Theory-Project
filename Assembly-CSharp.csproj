@@ -65,11 +65,11 @@
     <Compile Include="Assets/Scripts/Score.cs" />
     <Compile Include="Assets/Scripts/Hole.cs" />
     <Compile Include="Assets/Scripts/StartMenuData.cs" />
+    <Compile Include="Assets/Scripts/PostGameUIHandler.cs" />
     <Compile Include="Assets/Scripts/DifficultySetting.cs" />
     <Compile Include="Assets/Scripts/LevelManager.cs" />
     <Compile Include="Assets/Scripts/GameManager.cs" />
     <Compile Include="Assets/Scripts/PlayerData.cs" />
-    <Compile Include="Assets/Scripts/PostGameUIHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

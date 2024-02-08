@@ -9,16 +9,25 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
     const float startingTimeValue = 30f;
     public float timeValue;
-    // public float currentTimeRemaining;
     public float timeRemainingPercentage;
 
-    GameManager gameManager;
+    [SerializeField] AudioClip beep;
+    [SerializeField] AudioClip horn;
 
+    GameManager gameManager;
+    AudioSource audioSource;
+
+    private float lastBeepTime = 0f;
+    private float startBeepTime = 3f;
+
+    const int MAX_BEEPS = 3;
+    int currentBeeps = 0;
 
     void Start()
     {
         timeValue = startingTimeValue;
         gameManager = FindObjectOfType<GameManager>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,14 +39,22 @@ public class Timer : MonoBehaviour
             {
                 timeValue -= Time.deltaTime;
 
+                // Play beep sound for the last 3 seconds, once per second
+                if (timeValue <= startBeepTime &&
+                    Mathf.FloorToInt(timeValue) != lastBeepTime &&
+                    currentBeeps < MAX_BEEPS)
+                {
+                    lastBeepTime = Mathf.FloorToInt(timeValue);
+                    audioSource.PlayOneShot(beep, 0.5f);
+                    currentBeeps++;
+                }
             }
-
-            // clamping the time to 0 if it goes below that to prevent negative values
-            else
+            if (timeValue <= 0)
             {
                 timeValue = 0;
+                audioSource.PlayOneShot(horn, 0.75f);
             }
-        
+
             DisplayTime(timeValue);
             CalculateTimeValuePercentage();
 
