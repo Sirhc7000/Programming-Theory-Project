@@ -7,7 +7,7 @@ public class PostGameUIHandler : MonoBehaviour
 {
     [SerializeField] Button retryButton;
 
-    // Start is called before the first frame update
+    
     public void ActivateButton()
     {
         retryButton.interactable = false;
